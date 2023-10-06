@@ -1,8 +1,6 @@
 <?php
-    //import des ressources
-    include './vue/form.php';
-    include './model/article.php';
     $error = "";
+    include './model/article.php';
     //test si le formulaire est submit
     if(isset($_POST['submit'])){
         //test si les champs sont tous remplis
@@ -23,3 +21,5 @@
             $error = "Veuillez remplir les champs du formulaire";
         }
     }
+    //import des ressources
+    include './vue/form.php';

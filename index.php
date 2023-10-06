@@ -9,6 +9,9 @@
         case '/evalphp/':
             include './controller/controllerHome.php';
             break;
+        case '/evalphp/addarticle':
+            include './controller/controllerAddArticle.php';
+            break;
         default:
             include './controller/controller404.php';
             break;
