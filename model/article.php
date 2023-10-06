@@ -41,3 +41,16 @@
             die('Error : '.$e->getMessage());
         }
     }
+    //Fonction qui met à jour un article
+    function updateArticleById($bdd, $title, $content, $date, $id){
+        try {
+            $req = $bdd->prepare('UPDATE article set title = ?, content = ?,creation_date = ? WHERE id = ?');
+            $req->bindParam(1, $title, PDO::PARAM_STR);
+            $req->bindParam(2, $content, PDO::PARAM_STR);
+            $req->bindParam(3, $date, PDO::PARAM_STR);
+            $req->bindParam(4, $id, PDO::PARAM_INT);
+            $req->execute();
+        } catch (\Exception $e) {
+            die('Error : '.$e->getMessage());
+        }
+    }
