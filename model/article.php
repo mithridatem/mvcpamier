@@ -56,5 +56,11 @@
     }
     //Fonction qui supprime un article par son id
     function deleteArticleById($bdd, $id){
-        
+        try {
+            $req = $bdd->prepare('DELETE FROM article WHERE id = ?');
+            $req->bindParam(1, $id, PDO::PARAM_INT);
+            $req->execute();
+        } catch (\Exception $e) {
+            die('Error : '.$e->getMessage());
+        }
     }

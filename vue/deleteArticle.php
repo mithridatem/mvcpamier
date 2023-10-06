@@ -5,6 +5,7 @@
     <title>Supprimer un article</title>
 </head>
 <body>
+    <?php include './vue/navbar.php'; ?>
     <p id=""><?=$error?></p>
 </body>
 </html>
