@@ -1,4 +1,5 @@
 <?php
+    //import des ressources
     include './utils/bddConnexion.php';
     //Analyse de l'URL avec parse_url() et retourne ses composants
     $url = parse_url($_SERVER['REQUEST_URI']);
@@ -11,6 +12,9 @@
             break;
         case '/evalphp/addarticle':
             include './controller/controllerAddArticle.php';
+            break;
+        case '/evalphp/allarticle':
+            include './controller/controllerAllArticle.php';
             break;
         default:
             include './controller/controller404.php';

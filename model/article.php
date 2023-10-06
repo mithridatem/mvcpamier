@@ -15,6 +15,7 @@
             die('Error : '.$e->getMessage());
         }
     }
+    //Fonction qui retourne un article
     function getArticle($bdd, $title, $content, $date){
         try {
             $req = $bdd->prepare("SELECT id, title, content, creation_date FROM article WHERE
@@ -29,4 +30,8 @@
         catch (Exception $e) {
             die('Error : '.$e->getMessage());
         }
+    }
+    //Fonction qui retourne tous les articles
+    function getAllArticle($bdd){
+        
     }
