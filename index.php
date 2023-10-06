@@ -19,6 +19,9 @@
         case '/evalphp/updatearticle':
             include './controller/controllerUpdateArticle.php';
             break;
+        case '/evalphp/deletearticle':
+            include './controller/controllerDeleteArticle.php';
+            break;
         default:
             include './controller/controller404.php';
             break;

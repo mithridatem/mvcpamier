@@ -14,8 +14,9 @@
         <p><?=$value['content']?></p>
         <?php $date = new DateTimeImmutable($value['creation_date']);?>
         <p><?=$date->format('d/m/Y')?></p>
-        <a href="./updatearticle?id=<?=$value['id']?>"><i class="fa-solid fa-pen"></i></a>
-        <a href=""><i class="fa-solid fa-trash"></i></a>
+        <a href="./updatearticle?id=<?=$value['id']?>&title=<?=$value['title']
+        ?>&content=<?=$value['content']?>&date=<?=$value['creation_date']?>"><i class="fa-solid fa-pen"></i></a>
+        <a href="./deletearticle?id=<?=$value['id']?>"><i class="fa-solid fa-trash"></i></a>
     <?php endforeach ?> 
     <p id="error"><?=$error?></p>
 </body>

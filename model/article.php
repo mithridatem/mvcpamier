@@ -54,3 +54,7 @@
             die('Error : '.$e->getMessage());
         }
     }
+    //Fonction qui supprime un article par son id
+    function deleteArticleById($bdd, $id){
+        
+    }

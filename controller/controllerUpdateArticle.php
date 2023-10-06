@@ -1,7 +1,8 @@
 <?php
     $error = "";
     include './model/article.php';
-    if(isset($_GET['id']) AND !empty($_GET['id'])){
+    if(isset($_GET['id']) AND !empty($_GET['id']) AND isset($_GET['title']) AND !empty($_GET['title'])
+    AND isset($_GET['content']) AND !empty($_GET['content'])AND isset($_GET['date']) AND !empty($_GET['date'])){
         //tester si le fomulaire le submit
         if(isset($_POST['submit'])){
             //tester si les champs sont remplis
