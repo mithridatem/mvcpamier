@@ -7,19 +7,19 @@
     $path = isset($url['path']) ? $url['path'] : '/';
     //routeur
     switch ($path) {
-        case '/evalphp/':
+        case '/MVCPAMIER-1/':
             include './controller/controllerHome.php';
             break;
-        case '/evalphp/addarticle':
+        case '/MVCPAMIER-1/addarticle':
             include './controller/controllerAddArticle.php';
             break;
-        case '/evalphp/allarticle':
+        case '/MVCPAMIER-1/allarticle':
             include './controller/controllerAllArticle.php';
             break;
-        case '/evalphp/updatearticle':
+        case '/MVCPAMIER-1/updatearticle':
             include './controller/controllerUpdateArticle.php';
             break;
-        case '/evalphp/deletearticle':
+        case '/MVCPAMIER-1/deletearticle':
             include './controller/controllerDeleteArticle.php';
             break;
         default:
